@@ -10,14 +10,17 @@ jobs:
           name: derp
           path: extra-file.txt
   base-1: 
+    needs: [arti-1]
     uses: ./.github/workflows/reusable.yml
     with:
      username: bob-1
   base-2: 
+    needs: [arti-1]
     uses: ./.github/workflows/reusable.yml
     with:
      username: bob-2
   base-3: 
+    needs: [arti-1]
     uses: ./.github/workflows/reusable.yml
     with:
      username: bob-3
