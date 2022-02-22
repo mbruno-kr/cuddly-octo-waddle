@@ -11,3 +11,8 @@ jobs:
     environment: production
     steps:
       - run: echo "Hello ${{ inputs.username }}"
+      - uses: actions/download-artifact@v2
+        with:
+          name: derp
+          path: extra-file.txt
+      - run: echo extra-file.txt

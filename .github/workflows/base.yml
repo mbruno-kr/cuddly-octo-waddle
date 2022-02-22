@@ -1,6 +1,14 @@
 on: [push]
 
 jobs:
+  arti-1: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo howdy > extra-file.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: derp
+          path: extra-file.txt
   base-1: 
     uses: ./.github/workflows/reusable.yml
     with:
