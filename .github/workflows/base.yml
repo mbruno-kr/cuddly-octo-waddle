@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   arti-1: 
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, kubernetes ]
     steps:
       - run: echo howdy > extra-file.txt
       - uses: actions/upload-artifact@v2
