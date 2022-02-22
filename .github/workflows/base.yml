@@ -2,10 +2,4 @@ on: [push]
 
 jobs:
   base: 
-    name: "Base"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix: 
-        name: [michael, timothy]
     uses: ./.github/workflows/reusable.yml
